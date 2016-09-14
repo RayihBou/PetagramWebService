@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Pentagram UNAM</string>
+    <string name="NombreMascotas">Mascota</string>
+    <string name="NumeroLikes">0</string>
+    <string name="mContacto">Contacto</string>
+    <string name="mAcercaDe">Acerca De</string>
+    <string name="rayih_bou_orm">Rayih Bou Orm</string>
+    <string name="contacto">Contacto</string>
+    <string name="nombre">Nombre</string>
+    <string name="ingeniero_en_sistemas_con_24_a_os_de_edad_especializado_en_programaci_n_movil_de_android_development_nacido_en_venezuela_y_residenciado_en_colombia_enamorado_de_mi_profesi_n">Ingeniero en Sistemas con 24 años de edad, especializado en programación movil de Android Development. Nacido en Venezuela y residenciado en Colombia. Enamorado de mi profesión.</string>
+    <string name="instagram_rayihbou">Instagram: rayihbou</string>
+    <string name="linkedin_rayihbou">LinkedIn: rayihbou</string>
+    <string name="github_rayihbou">GitHub: rayihbou</string>
+    <string name="correo_electronico">Correo Electronico</string>
+    <string name="mensaje">Mensaje</string>
+    <string name="direcci_n">Dirección</string>
+    <string name="enviar">Enviar</string>
+    <string name="titulo">Titulo</string>
+    <string name="nombre_mascota">Nombre Mascota</string>
+
+
+</resources>
