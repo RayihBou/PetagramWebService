@@ -33,7 +33,7 @@ public class MascotasAdaptador extends RecyclerView.Adapter<MascotasAdaptador.Ma
 
     @Override
     public MascotasViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.cardview_mascotas, parent, false);
+        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.cardview_grid_mascota, parent, false);
         return new MascotasViewHolder(v);
     }
 
@@ -41,27 +41,29 @@ public class MascotasAdaptador extends RecyclerView.Adapter<MascotasAdaptador.Ma
     @Override
     public void onBindViewHolder(final MascotasViewHolder mascotasViewHolder, int position) {
         final Mascotas mascota = mascotas.get(position);
-        mascotasViewHolder.imgFoto.setImageResource(mascota.getFoto());
-        mascotasViewHolder.tvNombreCV.setText(mascota.getNombre());
+        //mascotasViewHolder.imgFoto.setImageResource(mascota.getFoto());
+        //mascotasViewHolder.tvNombreCV.setText(mascota.getNombre());
         mascotasViewHolder.tvLikesCV.setText(String.valueOf(mascota.getLikes()) + " Likes");
 
         mascotasViewHolder.imgFoto.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(activity, mascota.getNombre(), Toast.LENGTH_SHORT).show();
+                //Toast.makeText(activity, mascota.getNombre(), Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(activity, DetalleMascota.class);
-                intent.putExtra("nombre", mascota.getNombre());
+                //intent.putExtra("nombre", mascota.getNombre());
                 intent.putExtra("likes", mascota.getLikes());
-                intent.putExtra("foto", mascota.getFoto());
+                intent.putExtra("foto", mascota.getUrlFoto());
                 activity.startActivity(intent);
             }
         });
 
+        /*
         mascotasViewHolder.btnLike.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Toast.makeText(activity, "Diste Like a " + mascota.getNombre(),
                         Toast.LENGTH_SHORT).show();
+
 
 
                 //Codigo para utilizar el metodo darLikeMascota usado en nuestra clase BaseDatos
@@ -73,6 +75,7 @@ public class MascotasAdaptador extends RecyclerView.Adapter<MascotasAdaptador.Ma
 
             }
         });
+        */
     }
 
     @Override
@@ -83,18 +86,18 @@ public class MascotasAdaptador extends RecyclerView.Adapter<MascotasAdaptador.Ma
     public static class MascotasViewHolder extends RecyclerView.ViewHolder{
 
         private ImageView imgFoto;
-        private TextView tvNombreCV;
+        //private TextView tvNombreCV;
         private TextView tvLikesCV;
-        private ImageButton btnLike;
+        //private ImageButton btnLike;
 
 
         public MascotasViewHolder(View itemView) {
             super(itemView);
 
             imgFoto = (ImageView) itemView.findViewById(R.id.imgFoto);
-            tvNombreCV = (TextView) itemView.findViewById(R.id.tvNombreCV);
+            //tvNombreCV = (TextView) itemView.findViewById(R.id.tvNombreCV);
             tvLikesCV = (TextView) itemView.findViewById(R.id.tvLikesCV);
-            btnLike = (ImageButton) itemView.findViewById(R.id.btnLike);
+            //btnLike = (ImageButton) itemView.findViewById(R.id.btnLike);
 
 
 

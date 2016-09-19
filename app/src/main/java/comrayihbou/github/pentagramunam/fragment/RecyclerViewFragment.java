@@ -3,6 +3,7 @@ package comrayihbou.github.pentagramunam.fragment;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -39,6 +40,12 @@ public class RecyclerViewFragment extends Fragment implements iRecyclerViewFragm
         llm.setOrientation(LinearLayoutManager.VERTICAL);
         ListaMascotas.setLayoutManager(llm);
 
+    }
+
+    @Override
+    public void generarGridLayout() {
+        GridLayoutManager gridLayoutManager = new GridLayoutManager(getContext(),2);
+        ListaMascotas.setLayoutManager(gridLayoutManager);
     }
 
     @Override

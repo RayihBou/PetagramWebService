@@ -3,27 +3,26 @@ package comrayihbou.github.pentagramunam.pojo;
 
 public class Mascotas {
 
-    private String Nombre;
-    private int Likes;
-    private int Foto;
-    private int Id;
+    private String NombreCompleto;
+    private int Likes = 0;
+    private String UrlFoto;
+    private String Id;
 
-    public Mascotas(int Foto, String Nombre, int Likes){
-        this.Foto       = Foto;
-        this.Nombre     = Nombre;
+    public Mascotas(String UrlFoto, String NombreCompleto, int Likes){
+        this.UrlFoto    = UrlFoto;
+        this.NombreCompleto     = NombreCompleto;
         this.Likes      = Likes;
     }
 
     public Mascotas() {
-
     }
 
-    public int getFoto() {
-        return Foto;
+    public String getNombreCompleto() {
+        return NombreCompleto;
     }
 
-    public void setFoto(int foto) {
-        Foto = foto;
+    public void setNombreCompleto(String nombreCompleto) {
+        NombreCompleto = nombreCompleto;
     }
 
     public int getLikes() {
@@ -34,18 +33,20 @@ public class Mascotas {
         Likes = likes;
     }
 
-    public String getNombre() {
-        return Nombre;
+    public String getUrlFoto() {
+        return UrlFoto;
     }
 
-    public void setNombre(String nombre) {
-        Nombre = nombre;
+    public void setUrlFoto(String urlFoto) {
+        UrlFoto = urlFoto;
     }
 
-    public int getId() { return Id; }
+    public String getId() {
+        return Id;
+    }
 
-    public void setId(int id) { Id = id; }
-
-
+    public void setId(String id) {
+        Id = id;
+    }
 
 }

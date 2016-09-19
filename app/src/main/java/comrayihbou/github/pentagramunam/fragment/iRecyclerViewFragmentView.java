@@ -11,6 +11,7 @@ import comrayihbou.github.pentagramunam.pojo.Mascotas;
 public interface iRecyclerViewFragmentView {
 
     public void generarLinerLayoutVertical();
+    public void generarGridLayout();
 
     public MascotasAdaptador crearAdaptador(ArrayList<Mascotas> mascotas);
 

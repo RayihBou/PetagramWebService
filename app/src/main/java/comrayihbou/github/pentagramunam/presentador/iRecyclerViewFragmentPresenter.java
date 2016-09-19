@@ -6,5 +6,7 @@ public interface iRecyclerViewFragmentPresenter {
 
     public void obtenerMascotasBaseDatos();
 
+    public void obtenerMediosRecientes();
+
     public void mostrarMascotasRV();
 }
