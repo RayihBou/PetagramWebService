@@ -7,6 +7,8 @@ import android.support.v7.widget.RecyclerView;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.squareup.picasso.Picasso;
+
 import java.util.ArrayList;
 
 import comrayihbou.github.pentagramunam.R;
@@ -25,8 +27,8 @@ public class DetalleMascota extends AppCompatActivity {
 
     private ImageView imgFotoDetalle;
     private TextView tvLikesDetalle;
-    private static final String KEY_EXTRA_FOTO = "Foto";
-    private static final String KEY_EXTRA_LIKES = "Likes";
+    private static final String KEY_EXTRA_FOTO = "foto";
+    private static final String KEY_EXTRA_LIKES = "likes";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,9 +53,11 @@ public class DetalleMascota extends AppCompatActivity {
         tvLikesDetalle = (TextView) findViewById(R.id.tvLikesDetalle);
         tvLikesDetalle.setText(String.valueOf(likes));
 
-
-
-
+        imgFotoDetalle = (ImageView) findViewById(R.id.imgFotoDetalle);
+        Picasso.with(this)
+                .load(foto)
+                .placeholder(R.drawable.android)
+                .into(imgFotoDetalle);
 
     }
 

@@ -10,6 +10,9 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.squareup.picasso.Picasso;
+
 import java.util.ArrayList;
 
 import comrayihbou.github.pentagramunam.DB.ConstructorMascotas;
@@ -43,6 +46,12 @@ public class MascotasAdaptador extends RecyclerView.Adapter<MascotasAdaptador.Ma
         final Mascotas mascota = mascotas.get(position);
         //mascotasViewHolder.imgFoto.setImageResource(mascota.getFoto());
         //mascotasViewHolder.tvNombreCV.setText(mascota.getNombre());
+
+        Picasso.with(activity)
+                .load(mascota.getUrlFoto())
+                .placeholder(R.drawable.android)
+                .into(mascotasViewHolder.imgFoto);
+
         mascotasViewHolder.tvLikesCV.setText(String.valueOf(mascota.getLikes()) + " Likes");
 
         mascotasViewHolder.imgFoto.setOnClickListener(new View.OnClickListener() {

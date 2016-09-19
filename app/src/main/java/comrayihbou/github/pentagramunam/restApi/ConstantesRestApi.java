@@ -8,7 +8,7 @@ public class ConstantesRestApi {
     //Url Base Usada en cuanto al postman con el cual obtenemos toda la info de nuestro web service
 
     //https://api.instagram.com/v1/
-    public static final String Vesion = "/v1";
+    public static final String Vesion = "/v1/";
     public static final String ROOT_URL = "https://api.instagram.com" + Vesion;
     public static final String ACCESS_TOKEN = "3929345390.b99e935.b540ad31d315405f94bd4e7ea15959b5";
     public static final String KEY_ACCESS_TOKEN = "?access_token=";

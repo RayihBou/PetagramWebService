@@ -24,7 +24,7 @@ public class Perfil extends Fragment {
     ArrayList<MiPerro> miPerros;
     private RecyclerView listaPerros;
 
-    @Override
+    /*@Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View v=inflater.inflate(R.layout.fragment_perfil, container, false);
@@ -35,7 +35,7 @@ public class Perfil extends Fragment {
         inicializarPerros();
         inicializarAdaptador();
         return v;
-    }
+    }*/
 
     public void inicializarPerros()
     {
